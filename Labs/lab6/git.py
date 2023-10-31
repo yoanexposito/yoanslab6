@@ -29,7 +29,10 @@ def main():
             password = input('Please enter your password to encode: ')
             encode(password)
             print('Your password has been encoded ans stored!')
-            print(encode(password))
-
+        elif option == 2:
+            dePass = encode(password)
+            print('the encoded password is ', encode(password), 'and the original password is #decode(dePass)')
+        elif option == 3:
+            gameCont = False
 if __name__ == '__main__':
     main()
