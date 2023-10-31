@@ -9,9 +9,14 @@ def menu():
 def encode(plus):
     encoder = ''
     for i in range(0, len(plus)):
-        num = int(plus[i]) + 3
-        encoder += str(num)
+        if int(plus[i]) <= 6:
+            num = int(plus[i]) + 3
+            encoder += str(num)
+        if int(plus[i]) >= 7:
+            num = int(plus[i]) + 3
+            encoder += str(num)[1]
     return encoder
+
 
 
 def main():
