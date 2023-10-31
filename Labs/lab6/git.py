@@ -16,7 +16,16 @@ def encode(plus):
             num = int(plus[i]) + 3
             encoder += str(num)[1]
     return encoder
-
+def decode(minus):
+    decoder = ''
+    for i in range(0, len(minus)):
+        if int(minus[i]) >= 4:
+            num = int(minus[i]) - 3
+            decoder += str(num)
+        if int(minus[i]) <= 3:
+            num = abs(int(minus[i]) - 3)
+            decoder += str(num)
+    return decoder
 
 
 def main():
@@ -31,7 +40,7 @@ def main():
             print('Your password has been encoded ans stored!')
         elif option == 2:
             dePass = encode(password)
-            print('the encoded password is ', encode(password), 'and the original password is #decode(dePass)')
+            print('the encoded password is ', encode(password), 'and the original password is ' , decode(dePass), '.')
         elif option == 3:
             gameCont = False
 if __name__ == '__main__':
